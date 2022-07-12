@@ -1,53 +1,31 @@
 import React from "react";
+import {Outlet, Link } from "react-router-dom"
 
+//components
 import About from "./components/about";
 import Portfolio from "./components/portfolio";
-import Home from "./components/home";
 
 
-// import logo from './logo.svg';
+
+//styling
 import "./App.css";
 
+
+//the app itself
+
+
 const App = () => {
+ 
   return (
-    <nav>
-      <Home />
-      <About />
-      <Portfolio />
-    </nav>
-  );
+    <div>
+      <h1>does it work?</h1>
+      <nav>
+        <Link to="/about">About</Link>
+        <Link to="/portfolio">Portfolio</Link>
+      </nav>
+      <Outlet />
+    </div>
+  )
 }
-// function App() {
-//   return (
-//     <Router>
-//       <div>
-//         <nav>
-//           <ul>
-//             <li>
-//               <Link to="/">Home</Link>
-//             </li>
-//             <li>
-//               <Link to="/about">About</Link>
-//             </li>
-//             <li>
-//               <Link to="/portfolio">Portfolio</Link>
-//             </li>
-//           </ul>
-//         </nav>
-//         {/* <Routes>
-//           <Route path="/about">
-//             {about()}
-//           </Route>
-//           <Route path="/portfolio">
-//             {portfolio()}
-//           </Route>
-//           <Route path="/">
-//             {home()}
-//           </Route>
-//         </Routes> */}
-//       </div>
-//     </Router>
-//   );
-// }
 
 export default App;
